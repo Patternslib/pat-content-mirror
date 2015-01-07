@@ -22,6 +22,8 @@ By default, the pattern looks for the content mirror using the CSS selector
 `p.content-mirror .text`, though this can be overridden by the `target` 
 option.
 
+The placeholder can be overridden by the `placeholder` option.
+
 The example html below shows a structure that would work with the defaults:
 
     <p class="content-mirror"

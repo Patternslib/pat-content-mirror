@@ -34,5 +34,6 @@ The example html below shows a structure that would work with the defaults:
 
 Property | Value | Default | Type | Description
 ---------|-------|---------|------|------------
+placeholder | a text string | 'Leave a comment' | string | This string will be used as the placeholder of the textarea
 target | a CSS selector | `p.content-mirror .text` | string | a CSS selector that indicates in which element(s) the content of the textarea should be mirrored
 
