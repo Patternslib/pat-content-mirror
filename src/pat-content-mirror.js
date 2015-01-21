@@ -9,14 +9,12 @@ define([
   "use strict";
 
   var parser = new Parser("content-mirror");
-  parser.add_argument("placeholder");
   parser.add_argument("target"); 
 
   var contentmirror = {
     name: "content-mirror",
     trigger: ".pat-content-mirror",
     defaults: {
-      placeholder: "Leave a comment",
       target: "p.content-mirror .text"
     },
 
@@ -24,10 +22,7 @@ define([
       $el.on('input propertychange', $.proxy(this.updateMirror, this));
       var options = parser.parse($el, opts, true)[0]
       this.cfgs = _.extend(_.clone(this.defaults), options);
-      if (options.placeholder) {
-        $el.attr("placeholder", options.placeholder);
-        $(".placeholder", this.cfgs.target).text(options.placeholder);
-      }
+      $(".placeholder", this.cfgs.target).text($el.attr("placeholder")||'');
     },
 
     updateMirror : function updateMirror(ev) {
@@ -36,10 +31,10 @@ define([
         var the_mirror = $(this.cfgs.target);
         the_mirror.text($el.val());
         if(!$el.val().length){
-          var placeholder = this.cfgs.placeholder;
-          if (!placeholder) placeholder = this.defaults.placeholder;
-          $el.attr("placeholder", placeholder);
-          the_mirror.html('<em class="placeholder">'+placeholder+'</em>');
+          var placeholder = $el.attr("placeholder");
+          if (placeholder) {
+            the_mirror.html('<em class="placeholder">'+placeholder+'</em>');
+          }
         }
     }
 
