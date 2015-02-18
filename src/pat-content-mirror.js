@@ -19,16 +19,16 @@ define([
     },
 
     init: function content_mirror_init($el, opts) {
-      $el.on('input propertychange', $.proxy(this.updateMirror, this));
       var options = parser.parse($el, opts, true)[0]
       this.cfgs = _.extend(_.clone(this.defaults), options);
+      var target = this.cfgs.target;
+      $el.on('input propertychange', $.proxy(this.updateMirror, this, target));
       $(".placeholder", this.cfgs.target).text($el.attr("placeholder")||'');
     },
 
-    updateMirror : function updateMirror(ev) {
+    updateMirror : function updateMirror(target, ev) {
         var $el = $(ev.target);
-//        var the_mirror = $el.siblings('p.content-mirror').find('.text');
-        var the_mirror = $(this.cfgs.target);
+        var the_mirror = $(target);
         the_mirror.text($el.val());
         if(!$el.val().length){
           var placeholder = $el.attr("placeholder");
