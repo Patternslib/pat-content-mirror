@@ -9,7 +9,7 @@ define([
   "use strict";
 
   var parser = new Parser("content-mirror");
-  parser.add_argument("target"); 
+  parser.add_argument("target");
 
   var contentmirror = {
     name: "content-mirror",
@@ -23,6 +23,14 @@ define([
       this.cfgs = _.extend(_.clone(this.defaults), options);
       var target = this.cfgs.target;
       $el.on('input propertychange', $.proxy(this.updateMirror, this, target));
+      $el.parents('form').first().on('reset', function(e) {
+        $el.val('');
+        $(target).text('');
+        var placeholder = $el.attr("placeholder");
+        if (placeholder) {
+          $(target).html('<em class="placeholder">'+placeholder+'</em>');
+        }
+      });
       $(".placeholder", this.cfgs.target).text($el.attr("placeholder")||'');
     },
 
