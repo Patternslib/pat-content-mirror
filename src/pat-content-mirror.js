@@ -22,14 +22,12 @@ define([
       var options = parser.parse($el, opts, true)[0]
       this.cfgs = _.extend(_.clone(this.defaults), options);
       var target = this.cfgs.target;
+      var $mirror = $(target).parents('p.content-mirror').first();
+      var reset = $mirror.html();
       $el.on('input propertychange', $.proxy(this.updateMirror, this, target));
       $el.parents('form').first().on('reset', function(e) {
         $el.val('');
-        $(target).text('');
-        var placeholder = $el.attr("placeholder");
-        if (placeholder) {
-          $(target).html('<em class="placeholder">'+placeholder+'</em>');
-        }
+        $mirror.html(reset);
       });
       $(".placeholder", this.cfgs.target).text($el.attr("placeholder")||'');
     },
