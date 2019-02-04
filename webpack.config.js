@@ -44,7 +44,7 @@ module.exports = {
                         query: 'AbstractChosen'
                     },
                     {
-                        loader: 'imports-loader?chosen,jQuery=jquery,$=jquery,this=>window,jqmigrate=jquery-migrate',
+                        loader: 'imports-loader?chosen,jQuery=jquery,$=jquery,this=>window',
                     }
                 ]
             },
@@ -52,7 +52,7 @@ module.exports = {
                 test: /jquery.anythingslider|jcrop|jquery.placeholder|jquery.textchange|parsley|parsley.extend|select2|spectrum|spectrum-colorpicker/,
                 use: [
                     {
-                      loader: 'imports-loader?jquery,jqmigrate=jquery-migrate',
+                      loader: 'imports-loader?jquery',
                     }
                 ]
             },
@@ -60,11 +60,10 @@ module.exports = {
                 test: /showdown-prettify/,
                 use: [
                     {
-                      loader: 'imports-loader?showdown,google-code-prettify,jqmigrate=jquery-migrate',
+                      loader: 'imports-loader?showdown,google-code-prettify',
                     }
                 ]
             },
-            { test: /pat-content-mirror/, loader: 'imports-loader?jqmigrate=jquery-migrate' }
         ]
     },
     resolve: {
