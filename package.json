@@ -23,8 +23,8 @@
     "jquery.browser": "0.1.0",
     "karma": "^4.0.0",
     "lodash": "^4.17.11",
-    "patternslib": "git@github.com:Patternslib/patterns",
-    "underscore": "^1.8.3",
+    "patternslib": "git@github.com:Patternslib/patterns#jquery-migrate",
+    "underscore": "^1.9.1",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
