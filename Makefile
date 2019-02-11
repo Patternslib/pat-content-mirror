@@ -1,5 +1,3 @@
-HTTPSERVE   ?= node_modules/.bin/http-server
-
 all:: designerhappy
 
 ########################################################################
