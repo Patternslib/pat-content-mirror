@@ -12,5 +12,5 @@ clean::
 
 
 designerhappy:: stamp-npm
-	printf "\n\n Designer, you can be happy now.\n Go to http://localhost:4001/demo/ to see the demo \n\n\n\n"
+	printf "\n\n Designer, you can be happy now.\n Go to http://localhost:8080 to see the demo \n\n\n\n"
 	npm run start
