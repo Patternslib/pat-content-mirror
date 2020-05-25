@@ -6,38 +6,63 @@
     "name": "Fulvio Casali",
     "email": "fulviocasali@gmail.com"
   },
+  "homepage": "https://gitub.com/ploneintranet/pat-content-mirror",
+  "docs": "https://gitub.com/ploneintranet/pat-content-mirror",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:ploneintranet/pat-content-mirror.git"
   },
   "main": "./src/pat-content-mirror.js",
-  "dependencies": {},
-  "devDependencies": {},
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ],
-  "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --config webpack.config.js --open",
-    "build": "NODE_ENV=production webpack --config webpack.config.js",
-    "test": "karma start webpack/karma.config.js --single-run --browsers PhantomJS"
+  "dependencies": {
+    "patternslib": "https://github.com/Patternslib/Patterns#cc8d8d4ddfacc9d80fecf0b183f39eef365abd9f"
   },
-  "homepage": "https://gitub.com/ploneintranet/pat-content-mirror",
-  "docs": "https://gitub.com/ploneintranet/pat-content-mirror",
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "core-js": "3",
+    "eslint": "^7.0.0",
+    "jquery": "^3.5.0",
+    "underscore": "^1.9.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --open --env.NODE_ENV=development",
+    "build": "webpack --config webpack.config.js --env.NODE_ENV=production"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true
+    },
+    "parser": "babel-eslint"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": 3
+        }
+      ]
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
   "maintainers": [
     {
       "name": "Syslab.com GmbH",
       "email": "info@syslab.com",
       "url": "http://www.syslab.com"
-    },
-    {
-      "name": "Cornelis Kolbach",
-      "url": "http://cornae.com"
-    },
-    {
-      "name": "Fulvio Casali",
-      "url": "https://soliton.consulting"
     }
   ]
 }
