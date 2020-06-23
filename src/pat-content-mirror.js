@@ -1,7 +1,8 @@
 import $ from "jquery";
 import _ from "underscore";
-import Base from "patternslib/src/core/base";
-import Parser from "patternslib/src/core/parser";
+import { base as Base } from "@patternslib/core";
+import { parser as Parser } from "@patternslib/core";
+
 
 const parser = new Parser("content-mirror");
 parser.add_argument("target");
