@@ -2,13 +2,8 @@
     "name": "pat-content-mirror",
     "version": "1.0.0",
     "description": "A pattern for content-mirror",
-    "author": {
-        "name": "Syslab GesmbH",
-        "email": "dev@syslab.com"
-    },
     "license": "MIT",
-    "homepage": "https://gitub.com/ploneintranet/pat-content-mirror",
-    "main": "./src/content-mirror.js",
+    "main": "./src/pat-content-mirror.js",
     "dependencies": {
         "@patternslib/patternslib": "4"
     },
@@ -69,5 +64,14 @@
     },
     "publishConfig": {
         "access": "public"
+    },
+    "author": {
+        "name": "Syslab GesmbH",
+        "email": "dev@syslab.com"
+    },
+    "homepage": "https://github.com/ploneintranet/pat-PATTERN_TEMPLATE",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ploneintranet/pat-PATTERN_TEMPLATE.git"
     }
 }

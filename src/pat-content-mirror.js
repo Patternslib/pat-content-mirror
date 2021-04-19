@@ -1,7 +1,7 @@
 import $ from "jquery";
 import _ from "underscore";
-import Base from "patternslib/src/core/base";
-import Parser from "patternslib/src/core/parser";
+import Base from "@patternslib/patternslib/src/core/base";
+import Parser from "@patternslib/patternslib/src/core/parser";
 
 const parser = new Parser("content-mirror");
 parser.add_argument("target");
@@ -16,22 +16,18 @@ export default Base.extend({
     init: function content_mirror_init($el, opts) {
         const options = parser.parse($el, opts, true)[0];
         this.options = _.extend(_.clone(this.defaults), options);
-        const $mirror = $(this.options.target)
-            .parents("p.content-mirror")
-            .first();
+        const $mirror = $(this.options.target).parents("p.content-mirror").first();
         $el.on(
             "input propertychange",
             $.proxy(this.updateMirror, this, this.options.target)
         );
         $el.parents("form")
             .first()
-            .on("reset", function (e) {
+            .on("reset", function () {
                 $el.val("");
                 $mirror.html($mirror.html());
             });
-        $(".placeholder", this.options.target).text(
-            $el.attr("placeholder") || ""
-        );
+        $(".placeholder", this.options.target).text($el.attr("placeholder") || "");
     },
 
     updateMirror: function updateMirror(target, ev) {
@@ -41,9 +37,7 @@ export default Base.extend({
         if (!$el.val().length) {
             const placeholder = $el.attr("placeholder");
             if (placeholder) {
-                the_mirror.html(
-                    '<em class="placeholder">' + placeholder + "</em>"
-                );
+                the_mirror.html('<em class="placeholder">' + placeholder + "</em>");
             }
         }
     },

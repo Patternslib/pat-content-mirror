@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Content-mirror pattern demo</title>
+  <script src="/dist/bundle.js"></script>
+</head>
+<body class="sidebar-left-open  generic application- ">
+	<div id="content" class="application">
+		<h1>Content-mirror pattern demo</h1>
+	    <p class="my-mirror"
+	        ><span class="text"
+	        ><em class="placeholder">Leave a comment</em></span
+	        ><em class="selected-users" id="selected-users"></em
+	        ><em class="selected-tags" id="selected-tags"></em
+	    ></p>
+		<textarea class="pat-content-mirror" placeholder="Type some text" data-pat-content-mirror="target:.my-mirror .text"></textarea>
+    <hr />
+    <p class="my-other-mirror"
+            ><span class="text"
+            ><em class="placeholder">I am the other mirror. Try me.</em></em
+        ></p>
+        <textarea class="pat-content-mirror" placeholder="Say what's on your mind" data-pat-content-mirror="target:.my-other-mirror .text"></textarea>
+	</div>
+</body>
+</html>
