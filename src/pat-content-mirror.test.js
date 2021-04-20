@@ -22,8 +22,6 @@ describe("pat-content-mirror", () => {
         textarea.value = "this is a test text.";
         textarea.dispatchEvent(new Event("input"));
 
-        console.log(document.body.innerHTML);
-
         expect(document.querySelector(".mirror .text").textContent).toBe(
             "this is a test text."
         );
