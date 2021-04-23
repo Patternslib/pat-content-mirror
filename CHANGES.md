@@ -1,3 +1,14 @@
+### [1.0.1](https://github.com/patternslib/pat-content-mirror/compare/1.0.0...1.0.1) (2021-04-23)
+
+
+### Maintenance
+
+* **make release-patch:** Add missing patch for patch level releases. ([b997b4c](https://github.com/patternslib/pat-content-mirror/commit/b997b4cf344d2ddddd2e667922e484bb99c0e030))
+* **Release:** Remove the release-web target. Only Patternslib releases are pushed to Patterns-releases on Github. ([0a2482c](https://github.com/patternslib/pat-content-mirror/commit/0a2482c84694fc8e8320cdba80bbf6dc613fa33f))
+* **Release process:** Do not include the release commit in the changelog. ([64c1baa](https://github.com/patternslib/pat-content-mirror/commit/64c1baa64ccd5318af8f263c5d0a35b535d14c55))
+* gitignore dist/ ([5b08957](https://github.com/patternslib/pat-content-mirror/commit/5b089579df5c32b97d5b51040e94dbf1d5e1f42b))
+* Remove console.log from test. ([e869228](https://github.com/patternslib/pat-content-mirror/commit/e86922871a9604a53ae1461d5c120db7a8f39557))
+
 ## 1.0.0 (2021-04-20)
 
 
