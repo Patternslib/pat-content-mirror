@@ -7,7 +7,7 @@ describe("pat-content-mirror", () => {
         document.body.innerHTML = "";
     });
 
-    it("is initialized correctly", async (done) => {
+    it("is initialized correctly", async () => {
         document.body.innerHTML = `
     	    <p class="mirror"><span class="text"></span></p>
 	    	<textarea
@@ -25,7 +25,5 @@ describe("pat-content-mirror", () => {
         expect(document.querySelector(".mirror .text").textContent).toBe(
             "this is a test text."
         );
-
-        done();
     });
 });
