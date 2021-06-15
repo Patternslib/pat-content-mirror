@@ -1,3 +1,14 @@
+## [1.1.0](https://github.com/patternslib/pat-content-mirror/compare/1.0.1...1.1.0) (2021-06-15)
+
+
+### Maintenance
+
+* Test updates after jest upgrade. ([06603cd](https://github.com/patternslib/pat-content-mirror/commit/06603cd36746b0e83760344bed9f5be76988f6aa))
+* **dependencies:** Depend on Patternslib v4.4.0. ([3020d52](https://github.com/patternslib/pat-content-mirror/commit/3020d52793d84ecf7f32cf0339895a1998e21aa2))
+* **dependencies:** Upgrade dependencies on minor+patch level. ([e187ebc](https://github.com/patternslib/pat-content-mirror/commit/e187ebc4d275c49c8fe8ba9a53b362332b87b374))
+* **webpack:** Adapt start script to recent dependency changes. ([303f09e](https://github.com/patternslib/pat-content-mirror/commit/303f09e5552be0f19fcc6b559b0b3d5fb97ddfa2))
+* **webpack:** Simplify webpack. ([8ff025d](https://github.com/patternslib/pat-content-mirror/commit/8ff025d28590c13b93b807ebc74d002b993f7582))
+
 ### [1.0.1](https://github.com/patternslib/pat-content-mirror/compare/1.0.0...1.0.1) (2021-04-23)
 
 
