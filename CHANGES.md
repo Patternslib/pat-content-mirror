@@ -1,3 +1,20 @@
+## [2.0.0](https://github.com/patternslib/pat-content-mirror/compare/1.1.0...2.0.0) (2021-11-17)
+
+
+### Breaking Changes
+
+* Upgrade to Webpack 5. ([796c125](https://github.com/patternslib/pat-content-mirror/commit/796c125c9f5531ae7d9afd8c25285598dc078d12))
+
+
+
+### Maintenance
+
+* **build:** Extend Patternslib release-it config file. ([b00aa65](https://github.com/patternslib/pat-content-mirror/commit/b00aa654d13a31e9d51a9a4b31784f5ed7190c2e))
+
+* **build:** Release on GitHub releases. ([c2d193f](https://github.com/patternslib/pat-content-mirror/commit/c2d193f032914eb6e8bfeeb82822e83bb12201c4))
+
+* Upgrade up to minor versions. ([1127df0](https://github.com/patternslib/pat-content-mirror/commit/1127df0623109e4027977ff723f0fd881ec8a495))
+
 ## [1.1.0](https://github.com/patternslib/pat-content-mirror/compare/1.0.1...1.1.0) (2021-06-15)
 
 
