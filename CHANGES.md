@@ -1,3 +1,16 @@
+### [2.0.1](https://github.com/patternslib/pat-content-mirror/compare/2.0.0...2.0.1) (2022-03-24)
+
+
+### Bug Fixes
+
+* Add missing dependency underscore. ([40ae1d5](https://github.com/patternslib/pat-content-mirror/commit/40ae1d5d9e3031723b0e6e56ce83ac89180035f7))
+
+
+
+### Maintenance
+
+* **webpack:** Configure devServer static directory. ([125e5a7](https://github.com/patternslib/pat-content-mirror/commit/125e5a75b84000b40b0eee85f60227c79ca65e7e))
+
 ## [2.0.0](https://github.com/patternslib/pat-content-mirror/compare/1.1.0...2.0.0) (2021-11-17)
 
 
