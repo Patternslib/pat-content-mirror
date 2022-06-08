@@ -1,21 +1,16 @@
 import $ from "jquery";
-import _ from "underscore";
 import Base from "@patternslib/patternslib/src/core/base";
 import Parser from "@patternslib/patternslib/src/core/parser";
 
 const parser = new Parser("content-mirror");
-parser.add_argument("target");
+parser.addArgument("target", "p.content-mirror .text");
 
 export default Base.extend({
     name: "content-mirror",
     trigger: ".pat-content-mirror",
-    defaults: {
-        target: "p.content-mirror .text",
-    },
 
-    init: function content_mirror_init($el, opts) {
-        const options = parser.parse($el, opts, true)[0];
-        this.options = _.extend(_.clone(this.defaults), options);
+    init: function content_mirror_init($el) {
+        this.options = parser.parse(this.el, this.options);
         const $mirror = $(this.options.target).parents("p.content-mirror").first();
         $el.on(
             "input propertychange",
