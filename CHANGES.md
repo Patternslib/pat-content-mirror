@@ -1,3 +1,63 @@
+# Changelog
+
+
+
+## [3.0.0-alpha.0](https://github.com/patternslib/pat-content-mirror/compare/2.0.1...3.0.0-alpha.0) (2022-06-15)
+
+
+### Features
+
+
+* **Build:** Build module federation enabled bundles. ([3ef070b](https://github.com/patternslib/pat-content-mirror/commit/3ef070b6952f1c2953ac8f182786cc7501ea8c1e))
+
+
+### Breaking Changes
+
+
+* Depend on @patternslib/dev and extend config from there. ([2ec9a14](https://github.com/patternslib/pat-content-mirror/commit/2ec9a14fa3a8ab52563053f3d7661bf9fc6cbb13))
+
+* Extend babel config from @patternslib/dev. ([7362aa6](https://github.com/patternslib/pat-content-mirror/commit/7362aa605bd03440ba8cf067822b77ce6e647f7c))
+
+* Extend commitlint config from @patternslib/dev. ([fa15a47](https://github.com/patternslib/pat-content-mirror/commit/fa15a474bcae963cdf9ca56439f7ab67d4f3cb47))
+
+* Extend eslint config from @patternslib/dev. ([354dac2](https://github.com/patternslib/pat-content-mirror/commit/354dac26359a1219bd198378134fd1805bdb1f63))
+
+* Extend jest config from @patternslib/dev. ([665a68c](https://github.com/patternslib/pat-content-mirror/commit/665a68c421d9f64c2a558c01d90c02c72f16414d))
+
+* Extend Makefile from @patternslib/dev. ([9906b70](https://github.com/patternslib/pat-content-mirror/commit/9906b702b9ef747951c4ba78091882fa45e164c8))
+
+* Extend prettier config from @patternslib/dev. ([246875b](https://github.com/patternslib/pat-content-mirror/commit/246875b8fe0d630a4b6f3a6502788411627a3a86))
+
+* Extend release-it config from @patternslib/dev. ([dfe1071](https://github.com/patternslib/pat-content-mirror/commit/dfe10713331db7d05f9742f8d0306f828a5d2329))
+
+* Extend webpack config from @patternslib/dev. ([078daa9](https://github.com/patternslib/pat-content-mirror/commit/078daa9190b2e7e9634824ce42c17aa0f5442cfc))
+
+
+### Maintenance
+
+
+* **build:** Add build:dev script to package.json to create a unminified development build. ([24899fc](https://github.com/patternslib/pat-content-mirror/commit/24899fc7085cf351bdfbdb51e816c57938c5581d))
+
+* **Build:** @patternslib/patternslib as peerDependency. ([8290399](https://github.com/patternslib/pat-content-mirror/commit/8290399250fd43bb5f45acf253ad2c389773babf))Move @patternslib/patternslib dependency to peerDependencies and set to any version to avoid version conflicts when this package is a dependency of another Patternslib based package.
+
+* **Build:** Add @patternslib/patternslib also to devDependencies so that we get it installed. ([98c29eb](https://github.com/patternslib/pat-content-mirror/commit/98c29eb97c2908b7c9192c6c015a087b168724e0))
+
+* **Build:** Add keyword "patternslib" to package.json. ([4952153](https://github.com/patternslib/pat-content-mirror/commit/495215366e4e01b6782712b738881129b606a9f6))
+
+* **Build:** Extend jest.config.js from Patternslib and reuse their setupTests file too. ([6d6e04a](https://github.com/patternslib/pat-content-mirror/commit/6d6e04a4940af15c3daed54217e2975daeceebe2))
+
+* **Build:** Keep yarn.lock in repository. ([7cd4042](https://github.com/patternslib/pat-content-mirror/commit/7cd404228fe321311c38f4b541c87698475a42ef))
+
+* **Build:** Makefile - Allow OTP when publishing to npm, build bundles and publish them on GitHub, add pre-release targets. ([401eace](https://github.com/patternslib/pat-content-mirror/commit/401eacea84613e222cb743e9d9669c36218ca0d9))
+
+* **Build:** Remove dependency regenerator-runtime except from test setup. The async/await runtime handling is already built-in in current Babel. ([25f8f0f](https://github.com/patternslib/pat-content-mirror/commit/25f8f0f5f9abcd1ab6a7716463b02c5d2371e33b))
+
+* **Build:** Remove dependency underscore, explicitly add dependency jquery. ([1d201ac](https://github.com/patternslib/pat-content-mirror/commit/1d201ac699daee0e87f3b6c0acd7141626115497))
+
+* **Build:** Update GitHub actions setup. ([0bf2b95](https://github.com/patternslib/pat-content-mirror/commit/0bf2b952ca1f1751a4390d91277069645f955566))
+
+* **Build:** Upgrade and cleanup dependencies. ([779af4d](https://github.com/patternslib/pat-content-mirror/commit/779af4d39c9b9f17209b0357f80e3248be6bc890))
+
 ### [2.0.1](https://github.com/patternslib/pat-content-mirror/compare/2.0.0...2.0.1) (2022-03-24)
 
 
@@ -60,10 +120,7 @@
 * Upgrade to Patternslib v4 final - content-mirror customizations. ([2d456e5](https://github.com/patternslib/pat-content-mirror/commit/2d456e50f09797a677d29d0ee75f704af53b386d))
 * Upgrade to Patternslib v4 final. ([8271517](https://github.com/patternslib/pat-content-mirror/commit/8271517d6763d1baa80ac47a348578a152b5aa6d))
 
-# Changelog
-
 
 ## 1.0.0 - unreleased
 
 - Upgrade to ES6.
-
