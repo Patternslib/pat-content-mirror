@@ -2,6 +2,16 @@
 
 
 
+## [3.0.0](https://github.com/patternslib/pat-content-mirror/compare/3.0.0-alpha.0...3.0.0) (2022-06-28)
+
+
+### Maintenance
+
+
+* @patternslib/patternslib needs to be installed. Adding to devDependencies to avoid version clashes with other packages depending on it. ([b3fa0aa](https://github.com/patternslib/pat-content-mirror/commit/b3fa0aa934d562d45201e8bc64d99cd84f76ebed))
+
+* Upgrade to @patternslib/dev 2.2.0 and adapt module federation config. ([8b5c424](https://github.com/patternslib/pat-content-mirror/commit/8b5c4243fc110fa82315de1a2f98cdc7dadae13b))
+
 ## [3.0.0-alpha.0](https://github.com/patternslib/pat-content-mirror/compare/2.0.1...3.0.0-alpha.0) (2022-06-15)
 
 
