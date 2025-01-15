@@ -139,4 +139,24 @@ describe("pat-content-mirror", () => {
         expect(mirror2.textContent).toBe("placeholder 2");
     });
 
+    it("Removes line breaks.", async () => {
+        document.body.innerHTML = `
+            <section class="the-mirror"></section>
+            <textarea
+                class="pat-content-mirror"
+                data-pat-content-mirror="target:.the-mirror"></textarea>
+        `;
+
+        const instance = new Pattern(document.querySelector(".pat-content-mirror"));
+        await events.await_pattern_init(instance);
+
+        const textarea = document.querySelector("textarea");
+        textarea.value = "line1\nline2\rline3\r\nline4\n\rline5\vline7\fend";
+        textarea.dispatchEvent(new Event("input"));
+
+        expect(document.querySelector(".the-mirror").textContent).toBe(
+            "line1 line2 line3 line4 line5 line7 end"
+        );
+    });
+
 });

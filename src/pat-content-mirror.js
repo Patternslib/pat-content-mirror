@@ -40,7 +40,16 @@ class Pattern extends BasePattern {
     update_mirror(ev) {
         const el = ev.target;
         const the_mirror = this.target;
-        const value = el.value;
+
+        // Get value and remove line breaks and all vertical whitespace.
+        // Instead add a single space so that separated lines are not glued
+        // together.
+        const value = el.value.replace(/[\r\n\v\f]+/g, " ");
+
+        // Write back the cleaned value to the textearea.
+        el.value = value;
+
+        // Write value (or placeholder) to the mirror.
         the_mirror.textContent = value;
         if (!value) {
             const placeholder = this.el.getAttribute("placeholder");
