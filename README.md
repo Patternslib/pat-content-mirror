@@ -3,7 +3,8 @@ pat-content-mirror
 
 A pattern that provides rich dynamic functionality to a textarea. It is used
 for single-line text input that should be able to wrap into the next line.
-Line breaks are not allowed and removed from the text input.
+Line breaks, tabs or multiple space characters are not allowed, removed from
+the text input and replaced with a single space character.
 
 The main functionality is provided by maintaining a "mirror" element that
 is updated every time the main textarea is changed.  This element, which
