@@ -26,6 +26,26 @@ describe("pat-content-mirror", () => {
         );
     });
 
+    it("Works also with other than the default proposed markup structure.", async () => {
+        document.body.innerHTML = `
+            <section class="the-mirror"></section>
+            <textarea
+                class="pat-content-mirror"
+                data-pat-content-mirror="target:.the-mirror"></textarea>
+        `;
+
+        const instance = new Pattern(document.querySelector(".pat-content-mirror"));
+        await events.await_pattern_init(instance);
+
+        const textarea = document.querySelector("textarea");
+        textarea.value = "this is a test text.";
+        textarea.dispatchEvent(new Event("input"));
+
+        expect(document.querySelector(".the-mirror").textContent).toBe(
+            "this is a test text."
+        );
+    });
+
     it("works with multiple content mirrors.", async () => {
         document.body.innerHTML = `
     	    <p class="mirror-1"><span class="text"></span></p>
