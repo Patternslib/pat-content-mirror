@@ -41,10 +41,14 @@ class Pattern extends BasePattern {
         const el = ev.target;
         const the_mirror = this.target;
 
-        // Get value and remove line breaks and all vertical whitespace.
-        // Instead add a single space so that separated lines are not glued
-        // together.
-        const value = el.value.replace(/[\r\n\v\f]+/g, " ");
+        // Get value and replace line breaks and all vertical whitespace with a
+        // single space. This wraps multiple lines into a single line while
+        // separating them with a space.
+        // Also replace any whitespace with a single space character to clean
+        // up the text from tabs, multiple whitespace or any other non-standard
+        // space character.
+        let value = el.value
+        value = value.replace(/[\r\n\v\f\s]+/g, " ");
 
         // Write back the cleaned value to the textearea.
         el.value = value;
