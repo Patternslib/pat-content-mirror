@@ -2,6 +2,64 @@
 
 
 
+## [4.0.0](https://github.com/patternslib/pat-content-mirror/compare/3.0.0...4.0.0) (2025-01-15)
+
+
+### Features
+
+
+* Remove line breaks. ([459890d](https://github.com/patternslib/pat-content-mirror/commit/459890d816a30193d19d7c863a15d416745d5ae4))
+
+  .pat-content-mirror is intended for single-line inputs which need to be
+wrapped if the line is getting too long. Line breaks are not allowed but
+were possible until now.
+Now they are stripped from the input. Instead a single space character
+is used. This also works for copy/pasting where a list would not result
+in a long concatenated string but with a space as separator in between.
+
+Ref: scrum-2879
+
+
+
+### Bug Fixes
+
+
+* Add a test for the form reset feature fix. ([c2ec64e](https://github.com/patternslib/pat-content-mirror/commit/c2ec64e3d78e92c99e2b069183ccb64563a4736b))
+
+  Before modernization the reset button did not reset the placeholders in
+the pat-content-mirror mirror element. Not it does. This test just shows it,
+the fix was done in the previous commit.
+
+
+
+### Maintenance
+
+
+* Add test showing a different than the proposed markup structure. ([6a3e948](https://github.com/patternslib/pat-content-mirror/commit/6a3e94847a17f8052bcc67217f36c4107668d535))
+
+
+* Create a better demo. ([3144221](https://github.com/patternslib/pat-content-mirror/commit/31442213bc1cdffc5c4d69cc6c7712a76a8b4202))
+
+  - Include the bundle from the webpack dev server url.
+- Add a reset button to test the reset functionality.
+- Add a form to test form integration with the reset button.
+- Empty the placeholders as they are filled from the placeholder
+  attribute on the pat-content-mirror input.
+- Remove unnecessary elements, add fieldset wrappers.
+- Reformat with zpretty, modernize.
+
+
+* **pat-content-mirror:** Align with latest stanards from pat-PATTERN_TEMPLATE. ([597a66e](https://github.com/patternslib/pat-content-mirror/commit/597a66ef2a3afe2bea985e3cb62b10c965f8935b))
+
+
+* **pat-content-mirror:** Rework for class based pattern. ([78c3b67](https://github.com/patternslib/pat-content-mirror/commit/78c3b678f4b6fd80e1dc4dea73159ce21f0a8549))
+
+  Note: the event binding on the propertychange event is removed as this dates
+back to IE times and is not supported by any modern browser.
+
+
+* Upgrade Node.js version for GitHub actions to 22 (LTS) and GitHub workflow dependencies. ([b31d4a7](https://github.com/patternslib/pat-content-mirror/commit/b31d4a7489a9e698dcdf9a6b9dd5eef7ab0bbe6b))
+
 ## [3.0.0](https://github.com/patternslib/pat-content-mirror/compare/3.0.0-alpha.0...3.0.0) (2022-06-28)
 
 
