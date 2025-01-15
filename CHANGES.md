@@ -16,6 +16,20 @@ spaces as a single space character.
 
 Ref: scrum-2879.
 
+## [4.0.1](https://github.com/patternslib/pat-content-mirror/compare/4.0.0...4.0.1) (2025-01-15)
+
+
+### Bug Fixes
+
+
+* Also replace tabs and multiple space characters with a single space. ([f5e1d0a](https://github.com/patternslib/pat-content-mirror/commit/f5e1d0aed38763d7dbc836059498140de2ea68f9))
+
+  This makes sure that the textarea which would preserve multiple spaces
+aligns with the mirror - e.g. a paragraph - which displays multiple
+spaces as a single space character.
+
+Ref: scrum-2879.
+
 ## [4.0.0](https://github.com/patternslib/pat-content-mirror/compare/3.0.0...4.0.0) (2025-01-15)
 
 
