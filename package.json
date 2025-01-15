@@ -1,6 +1,6 @@
 {
     "name": "@patternslib/pat-content-mirror",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "description": "A pattern for content-mirror",
     "license": "MIT",
     "main": "./src/pat-content-mirror.js",
