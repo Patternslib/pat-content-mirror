@@ -5,11 +5,10 @@
     "license": "MIT",
     "main": "./src/pat-content-mirror.js",
     "dependencies": {
-        "@patternslib/patternslib": ">=9.10.1-alpha.0",
-        "jquery": "^3.6.0"
+        "@patternslib/patternslib": ">=9.10.1-alpha.0"
     },
     "devDependencies": {
-        "@patternslib/dev": "<4"
+        "@patternslib/dev": "4"
     },
     "scripts": {
         "start": "NODE_ENV=development webpack serve --config webpack.config.js",
