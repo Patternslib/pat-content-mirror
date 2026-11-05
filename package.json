@@ -4,6 +4,7 @@
     "description": "A pattern for content-mirror",
     "license": "MIT",
     "main": "./src/pat-content-mirror.js",
+    "packageManager": "pnpm@12.16.1",
     "dependencies": {
         "@patternslib/patternslib": ">=9.10.1-alpha.0"
     },
